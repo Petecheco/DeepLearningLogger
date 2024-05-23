@@ -12,5 +12,5 @@
 
 - [ ] Calculation of Accuracy, Precision, Recall and F1 score
 - [ ] Visualization of Confusion Matrix
-- [ ] 
+- [ ] Summarize the model
 
