@@ -51,7 +51,6 @@ class Chart:
     def __init__(self, x_label: str, y_label: str, title: str, figure_size: tuple):
         plt.ion()
         self.fig, self.ax = plt.subplots(figsize=figure_size)
-        # 设置标题和坐标轴标签
         self.ax.set_title(title)
         self.ax.set_xlabel(x_label)
         self.ax.set_ylabel(y_label)
@@ -59,27 +58,14 @@ class Chart:
         self.line = None
 
     def draw_line_chart(self, x_data: list, y_data: list):
-        # 更新数据
         if self.line is None:
             self.line, = self.ax.plot(x_data, y_data, '-')
         else:
-            # 更新数据
             self.line.set_data(x_data, y_data)
 
-            # 重置数据范围和自动缩放
         self.ax.relim()
         self.ax.autoscale_view()
-        # 重绘
         plt.draw()
         plt.pause(0.1)
 
 
-if __name__ == '__main__':
-    x_data = []
-    y_data = []
-    plot_initializer()
-    new_chart = Chart("中文x", "y", "title", (10, 5))
-    for i in range(100):
-        x_data.append(i)
-        y_data.append(i ** 2)  # 示例数据，根据实际情况修改
-        new_chart.draw_line_chart(x_data, y_data)
