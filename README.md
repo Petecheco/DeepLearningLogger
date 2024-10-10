@@ -1,5 +1,5 @@
 # DeepLearningLogger
- This is a logger class than contains almost everythin you can image in deep learing. :)
+ This is a logger that aims to record training status and print out things.
 
 ## Existing Functions:
 
@@ -10,7 +10,7 @@
 
 ## TODO
 
-- [ ] Calculation of Accuracy, Precision, Recall and F1 score
-- [ ] Visualization of Confusion Matrix
-- [ ] Summarize the model
+- [ ] Initialize the Logger
+- [ ] Add some metrics
+- [ ] Print different messages
 
