@@ -8,8 +8,9 @@ import matplotlib.pyplot as plt
 
 def get_device():
     """
-    自动选择使用CPU或GPU训练
-    :return 返回训练时的设备
+    Automatically return the device for training
+    (Use GPU when cuda is available else CPU)
+    :return Training device
     """
     if torch.cuda.is_available():
         return torch.device('cuda')
@@ -19,7 +20,7 @@ def get_device():
 
 def print_current_torch_version():
     """
-    查询当前pytorch版本
+    Query the current PyTorch version
     :return:
     """
     print("The current torch version is", torch.__version__)
@@ -27,7 +28,7 @@ def print_current_torch_version():
 
 def set_training_seed(random_seed: int):
     """
-    设定训练时候的随机种子，方便重复实验
+    Set the random seed for reproducible results.
     :param random_seed:
     :return:
     """
